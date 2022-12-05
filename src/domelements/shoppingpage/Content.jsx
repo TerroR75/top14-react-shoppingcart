@@ -5,25 +5,29 @@ const items = [
     name: 'FirstItem',
     descr: 'First item description',
     price: 59,
-    id: 0,
+    quantity: 1,
+    itemid: 0,
   },
   {
     name: 'SecondItem',
     descr: 'Second item description',
     price: 199,
-    id: 1,
+    quantity: 1,
+    itemid: 1,
   },
   {
     name: 'ThirdItem',
     descr: 'Third item description',
     price: 19,
-    id: 2,
+    quantity: 1,
+    itemid: 2,
   },
   {
     name: 'FourthItem',
     descr: 'Fourth item description',
     price: 599,
-    id: 3,
+    quantity: 1,
+    itemid: 3,
   },
 ];
 
@@ -31,10 +35,18 @@ export default function () {
   const [shoppingCart, setShoppingCart] = useOutletContext();
   function addItemToShoppingCart(e) {
     // Checks "database" for particular item (from event)
-    const foundItem = items.find((item) => String(item.id) === e.target.dataset.itemid);
+    const foundItem = items.find((item) => String(item.itemid) === e.target.dataset.itemid);
 
-    // Add item to shopping cart
-    setShoppingCart([...shoppingCart, foundItem]);
+    // Checks if item is already in cart - if so -> increment the quantity by 1, if not -> add it to the cart
+    if (shoppingCart.some((item) => item.itemid === foundItem.itemid)) {
+      const existingItem = shoppingCart.find((item) => item.itemid === foundItem.itemid);
+      existingItem.quantity += 1;
+      setShoppingCart([...shoppingCart]);
+    } else {
+      setShoppingCart([...shoppingCart, foundItem]);
+    }
+
+    // Add item to shopping cart by using setState
   }
   return (
     <div className='sp-content'>
@@ -44,7 +56,7 @@ export default function () {
             <h1>{item.name}</h1>
             <div>{item.descr}</div>
             <div>{'$' + item.price}</div>
-            <button data-itemid={item.id} onClick={addItemToShoppingCart}>
+            <button data-itemid={item.itemid} onClick={addItemToShoppingCart}>
               Add to cart
             </button>
           </div>
