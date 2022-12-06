@@ -1,35 +1,5 @@
 import { useOutletContext } from 'react-router-dom';
-
-const items = [
-  {
-    name: 'FirstItem',
-    descr: 'First item description',
-    price: 59,
-    quantity: 1,
-    itemid: 0,
-  },
-  {
-    name: 'SecondItem',
-    descr: 'Second item description',
-    price: 199,
-    quantity: 1,
-    itemid: 1,
-  },
-  {
-    name: 'ThirdItem',
-    descr: 'Third item description',
-    price: 19,
-    quantity: 1,
-    itemid: 2,
-  },
-  {
-    name: 'FourthItem',
-    descr: 'Fourth item description',
-    price: 599,
-    quantity: 1,
-    itemid: 3,
-  },
-];
+import items from '../../database/shopItems';
 
 export default function () {
   const [shoppingCart, setShoppingCart] = useOutletContext();
@@ -49,6 +19,7 @@ export default function () {
       {items.map((item) => {
         return (
           <div key={item.itemid} className='sp-c-item'>
+            <img src={item.img}></img>
             <h1>{item.name}</h1>
             <div>{item.descr}</div>
             <div>{'$' + item.price}</div>

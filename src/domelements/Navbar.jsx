@@ -35,7 +35,9 @@ export default function (props) {
         </li>
       </ul>
       <span className='nav-shopping-cart'>
-        <div onClick={consoleLogCart}>Cart</div>
+        <div className='nav-shopping-cart-button' onClick={consoleLogCart}>
+          Cart
+        </div>
         <div className='shopping-cart-popup'>
           <div className='shopping-cart-popup-items-container'>
             {shoppingCart.map((item) => {
