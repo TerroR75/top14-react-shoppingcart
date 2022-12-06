@@ -32,9 +32,21 @@
             display:flex;
             flex-direction: column;
 
+            .shopping-cart-popup-items-container{
+                overflow: auto;
+            }
+
             .shopping-cart-popup-item{
                 display:flex;
+                align-items: center;
+                justify-content: space-between;
                 gap: 15px;
+                border:1px solid white;
+                height: 50px;
+            }
+
+            .shopping-cart-popup-summary{
+                margin-top: auto;
             }
         }
 
