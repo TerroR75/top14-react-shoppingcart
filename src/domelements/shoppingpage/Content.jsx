@@ -39,20 +39,16 @@ export default function () {
 
     // Checks if item is already in cart - if so -> increment the quantity by 1, if not -> add it to the cart
     if (shoppingCart.some((item) => item.itemid === foundItem.itemid)) {
-      const existingItem = shoppingCart.find((item) => item.itemid === foundItem.itemid);
-      existingItem.quantity += 1;
       setShoppingCart([...shoppingCart]);
     } else {
       setShoppingCart([...shoppingCart, foundItem]);
     }
-
-    // Add item to shopping cart by using setState
   }
   return (
     <div className='sp-content'>
       {items.map((item) => {
         return (
-          <div className='sp-c-item'>
+          <div key={item.itemid} className='sp-c-item'>
             <h1>{item.name}</h1>
             <div>{item.descr}</div>
             <div>{'$' + item.price}</div>
