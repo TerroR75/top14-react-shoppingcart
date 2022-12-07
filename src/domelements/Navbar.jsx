@@ -69,7 +69,7 @@ export default function (props) {
               }, 0)}
             </div>
             <div className='shopping-cart-popup-summary-checkout'>
-              <button>Checkoutt</button>
+              <button>Checkout</button>
             </div>
           </div>
         </div>
