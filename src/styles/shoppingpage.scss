@@ -6,7 +6,7 @@
 
 
     .sp-navbar{
-        border: 1px solid blue;
+        // border: 1px solid blue;
         width: 500px;
         height: 100%;
         position: fixed;
@@ -35,6 +35,22 @@
             justify-content: space-between;
             // box-sizing: border-box;
 
+            .sp-c-item-add-to-cart-btn{
+                position: absolute;
+                bottom: 24px;
+                right: 24px;
+                font-size: 1.5rem;
+                cursor: pointer;
+                visibility: hidden;
+                transition: transform 100ms;
+            }
+            .sp-c-item-add-to-cart-btn:hover{
+                transform: scale(1.2);
+            }
+            .fa-cart-plus{
+                color: rgb(83, 248, 83);
+            }
+
             img{
                 object-fit: contain;
                 width: 100%;
@@ -55,6 +71,10 @@
         .sp-c-item:hover{
             border: 1px solid rgba(165, 165, 165, 1);
             box-shadow: 0px 0px 8px 0px rgba(165, 165, 165, 1);
+
+            .sp-c-item-add-to-cart-btn{
+                visibility: visible;
+            }
         }
     }
 }

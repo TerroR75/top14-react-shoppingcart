@@ -5,11 +5,34 @@
     position: fixed;
     align-items: center;
     justify-content: center;
-    border: 1px solid white;
+    // border: 1px solid white;
     font-size: 1.2rem;
     z-index: 100;
-    background: #272727;
+    background: #303030;
     
+.navbar-button{
+    width: 80px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+}
+
+.navbar-button::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width : 0px;
+    border-bottom: 2px solid rgba(165, 165, 165, 0);
+    transition: border-bottom 300ms, width 300ms;
+}
+
+.navbar-button:hover::before{
+    width: 80px;
+    border-bottom: 2px solid rgba(165, 165, 165, 1);
+}
 
     ul{
         width: 100%;
@@ -30,6 +53,7 @@
 
         .nav-shopping-cart-button{
             cursor:pointer;
+            // width: 50px;
         }
 
         .shopping-cart-popup{
