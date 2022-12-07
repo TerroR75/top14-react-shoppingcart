@@ -5,9 +5,9 @@ import ErrorPage from './routes/errorPage';
 import ShoppingPage from './routes/ShoppingPage';
 import HomePage from './routes/HomePage';
 import './styles/main.scss';
-import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider, Route } from 'react-router-dom';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App />,
