@@ -28,14 +28,18 @@ export default function (props) {
     <nav className='navbar'>
       <ul>
         <li>
-          <Link to={'/'}>Home</Link>
+          <Link to={'/'}>
+            <div className='navbar-button'>Home</div>
+          </Link>
         </li>
         <li>
-          <Link to={'/products'}>Shop</Link>
+          <Link to={'/products'}>
+            <div className='navbar-button'>Shop</div>
+          </Link>
         </li>
       </ul>
       <span className='nav-shopping-cart'>
-        <div className='nav-shopping-cart-button' onClick={consoleLogCart}>
+        <div className='nav-shopping-cart-button navbar-button' onClick={consoleLogCart}>
           Cart
         </div>
         <div className='shopping-cart-popup'>
