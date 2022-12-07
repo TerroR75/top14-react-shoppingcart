@@ -3,7 +3,7 @@
 React shopping cart assignment from [The Odin Project](https://www.theodinproject.com) curriculum.
 App's purpose is to simply introduce shopping cart implementation.
 
-Live Preview: #
+Live Preview: https://terror75.github.io/top14-react-shoppingcart/#/
 
 ![Preview_1](#)
 ![alt text](#)
