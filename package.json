@@ -2,7 +2,7 @@
   "name": "top14-react-shoppingcart",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://TerroR75.github.io/top14-react-shoppingcart",
+  "homepage": "https://terror75.github.io/top14-react-shoppingcart/",
   "type": "module",
   "scripts": {
     "dev": "vite",
