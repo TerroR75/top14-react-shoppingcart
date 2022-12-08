@@ -46,28 +46,36 @@ export default function (props) {
             {shoppingCart.map((item) => {
               return (
                 <div key={item.itemid} className='shopping-cart-popup-item'>
-                  <div>{item.name}</div>
-                  <div>
+                  <div className='shopping-cart-popup-item-img-container'>
+                    <img src={item.img}></img>
+                  </div>
+                  <div className='shopping-cart-popup-item-info-container'>
+                    <div className='item-name'>{item.name}</div>
                     <input
                       data-itemid={item.itemid}
                       onChange={handleQuantityInput}
                       defaultValue={item.quantity}
                       type='number'
                       min='0'
+                      max='100'
                     ></input>
                   </div>
-                  <div>{'$' + item.price}</div>
+                  <div className='item-price'>{'$' + item.price}</div>
                 </div>
               );
             })}
           </div>
           <div className='shopping-cart-popup-summary'>
             <div className='shopping-cart-popup-summary-total'>
-              {shoppingCart.reduce((previous, current) => {
-                return previous + current.price * current.quantity;
-              }, 0)}
+              <div>Total:</div>
+              <div>
+                $
+                {shoppingCart.reduce((previous, current) => {
+                  return previous + current.price * current.quantity;
+                }, 0)}
+              </div>
             </div>
-            <div className='shopping-cart-popup-summary-checkout'>
+            <div>
               <button>Checkout</button>
             </div>
           </div>

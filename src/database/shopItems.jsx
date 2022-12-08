@@ -2,6 +2,7 @@ import Ryzen51600X from '../assets/11157-ryzen-5-pib-1600x-960x458.png';
 import Ryzen52600 from '../assets/amdryzen52600.webp';
 import Ryzen53600 from '../assets/amdryzen53600.webp';
 import Ryzen55600 from '../assets/amdryzen55600.png';
+import ImgPlaceholder from '../assets/placeholder.png';
 
 const items = [
   {
@@ -39,6 +40,7 @@ const items = [
   {
     name: 'Fifth Item',
     descr: 'Fourth item description',
+    img: ImgPlaceholder,
     price: 599,
     quantity: 1,
     itemid: 4,
@@ -46,6 +48,7 @@ const items = [
   {
     name: 'Sixth Item',
     descr: 'Fourth item description',
+    img: ImgPlaceholder,
     price: 599,
     quantity: 1,
     itemid: 5,
@@ -53,6 +56,7 @@ const items = [
   {
     name: 'Seventh Item',
     descr: 'Fourth item description',
+    img: ImgPlaceholder,
     price: 599,
     quantity: 1,
     itemid: 6,
@@ -60,6 +64,7 @@ const items = [
   {
     name: 'Eighth Item',
     descr: 'Fourth item description',
+    img: ImgPlaceholder,
     price: 599,
     quantity: 1,
     itemid: 7,
@@ -67,6 +72,7 @@ const items = [
   {
     name: 'Ninth Item',
     descr: 'Fourth item description',
+    img: ImgPlaceholder,
     price: 599,
     quantity: 1,
     itemid: 8,
@@ -74,6 +80,7 @@ const items = [
   {
     name: 'Tenth Item',
     descr: 'Fourth item description',
+    img: ImgPlaceholder,
     price: 599,
     quantity: 1,
     itemid: 9,
@@ -81,6 +88,7 @@ const items = [
   {
     name: 'Eleventh Item',
     descr: 'Fourth item description',
+    img: ImgPlaceholder,
     price: 599,
     quantity: 1,
     itemid: 10,
