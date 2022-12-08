@@ -13,14 +13,13 @@ export default function (props) {
     const foundItem = shoppingCart.find((item) => String(item.itemid) === e.target.dataset.itemid);
     const inputValue = parseInt(e.target.value);
 
-    if (inputValue === 0 || inputValue < 0) {
+    if (inputValue === 0 || inputValue < 0 || isNaN(inputValue)) {
       const newArray = shoppingCart.filter((item) => item.itemid !== parseInt(e.target.dataset.itemid));
       setShoppingCart(newArray);
     } else {
       foundItem.quantity = inputValue;
       setShoppingCart([...shoppingCart]);
     }
-
     console.log(foundItem);
     console.log(e.target.dataset.itemid);
   }
