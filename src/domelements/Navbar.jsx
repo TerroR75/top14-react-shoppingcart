@@ -39,7 +39,8 @@ export default function (props) {
       </ul>
       <span className='nav-shopping-cart'>
         <div className='nav-shopping-cart-button navbar-button' onClick={consoleLogCart}>
-          Cart
+          <span>Cart</span>
+          {shoppingCart.length > 0 ? <div className='cart-item-quantity-notification'>{shoppingCart.length}</div> : <div></div>}
         </div>
         <div className='shopping-cart-popup'>
           <div className='shopping-cart-popup-items-container'>

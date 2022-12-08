@@ -24,7 +24,7 @@ export default function () {
             <div>{item.descr}</div>
             <div>{'$' + item.price}</div>
             <div className='sp-c-item-add-to-cart-btn'>
-              <i data-itemid={item.itemid} onClick={addItemToShoppingCart} class='fa-solid fa-cart-plus'></i>
+              <i data-itemid={item.itemid} onClick={addItemToShoppingCart} className='fa-solid fa-cart-plus'></i>
             </div>
           </div>
         );

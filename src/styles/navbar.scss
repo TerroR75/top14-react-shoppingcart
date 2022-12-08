@@ -51,6 +51,20 @@
         text-align: center;
         position: relative;
 
+        .cart-item-quantity-notification{
+            position:absolute;
+            left: 65px;
+            bottom: 20px;
+            background: green;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+        }
+
         .nav-shopping-cart-button{
             cursor:pointer;
             // width: 50px;
@@ -110,6 +124,12 @@
                     width: 50%;
                     background-color: #119E00;
                     cursor: pointer;
+
+                    transition: background-color 200ms;
+                }
+
+                button:hover{
+                   background-color: #11ad00;
                 }
 
                 .shopping-cart-popup-summary-total{
